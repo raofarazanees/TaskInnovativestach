@@ -1,0 +1,35 @@
+<div>
+    <!-- <form (ngSubmit)="onSubmit()">
+        <input type="text" [(ngModel)]="user.name" name="name" placeholder="Name" required />
+        <input type="email" [(ngModel)]="user.email" name="email" placeholder="Email" required />
+        <input type="number" [(ngModel)]="user.age" name="age" placeholder="Age" required />
+        <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} User</button>
+    </form> -->
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="row" fxLayoutWrap="wrap" class="row-flex">
+        <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" />
+            </mat-form-field>
+        </div>
+        <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" />
+            </mat-form-field>
+        </div>
+        <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
+            <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input type="number" matInput formControlName="age" />
+            </mat-form-field>
+        </div>
+        <div fxFlex.gt-sm="20" fxFlex.gt-xs="100" fxFlex="100">
+            <button mat-raised-button color="primary">
+                {{ isEditMode ? 'Update' : 'Add' }} User
+            </button>
+        </div>
+    </div>
+</form>

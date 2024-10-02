@@ -1,0 +1,18 @@
+<div class="list-container">
+    <!-- Sticky Header -->
+    <div class="sticky-header">
+        Sticky List Header
+    </div>
+
+    <!-- List of Items -->
+    <ul class="item-list">
+        <li *ngFor="let item of items" class="item">
+            {{ item }}
+        </li>
+    </ul>
+
+    <!-- Loader in Footer -->
+    <div *ngIf="isLoading" class="list-footer">
+        Loading more...
+    </div>
+</div>

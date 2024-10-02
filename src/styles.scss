@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variable';
+
+.row-flex {
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
